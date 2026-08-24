@@ -1,232 +1,186 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empatia e Cooperação</title>
-
+  <title>Empatia & Compreensão</title>
   <style>
+    /* Estilos Globais e Reset */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8f6;
+      color: #2c3e50;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
     }
 
+    /* Cabeçalho */
     header {
-      background: linear-gradient(135deg, #6a1b9a, #00897b);
-      color: white;
-      text-align: center;
+      width: 100%;
+      background: linear-gradient(135deg, #a8e6cf, #dbede3);
       padding: 60px 20px;
+      text-align: center;
+      border-bottom: 2px solid #84c1a0;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      color: #2d5a43;
       margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.2rem;
+      color: #4a7c59;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    nav {
-      background: #ffffff;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      color: #6a1b9a;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 15px;
-    }
-
-    nav a:hover {
-      color: #00897b;
-    }
-
+    /* Conteúdo Principal */
     main {
-      max-width: 1000px;
+      max-width: 800px;
+      width: 90%;
       margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      background: white;
-      margin-bottom: 30px;
+      background: #ffffff;
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
-
-    h2 {
-      color: #6a1b9a;
-      margin-bottom: 15px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
     .card {
-      background: #f8f4ff;
-      padding: 25px;
-      border-radius: 12px;
-      border-left: 5px solid #00897b;
+      margin-bottom: 30px;
     }
 
-    .card h3 {
-      color: #00897b;
+    .card h2 {
+      color: #3b7a57;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Seção de Ações de Empatia */
+    .tips-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .tips-list li {
+      background-color: #f0f7f4;
       margin-bottom: 10px;
+      padding: 12px 18px;
+      border-left: 4px solid #57cc99;
+      border-radius: 4px;
     }
 
-    ul {
-      padding-left: 25px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .frase {
-      background: linear-gradient(135deg, #00897b, #6a1b9a);
-      color: white;
+    /* Área do Botão de Curtidas */
+    .like-section {
       text-align: center;
-      padding: 35px;
-      border-radius: 15px;
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 25px;
       margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
+    .like-btn {
+      background-color: #57cc99;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 3px 10px rgba(87, 204, 153, 0.3);
+    }
 
-      nav a {
-        display: block;
-        margin: 8px;
-      }
+    .like-btn:hover {
+      background-color: #38b000;
+    }
+
+    .like-btn:active {
+      transform: scale(0.96);
+    }
+
+    .like-count {
+      background-color: #ffffff;
+      color: #3b7a57;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+    }
+
+    /* Rodapé */
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      width: 100%;
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <h1>💜 Empatia e Cooperação 🤝</h1>
-    <p>Juntos podemos construir um mundo mais respeitoso e solidário.</p>
+    <h1>Empatia & Compreensão</h1>
+    <p>Conectar-se com o outro é o primeiro passo para transformar o mundo.</p>
   </header>
 
-  <nav>
-    <a href="#empatia">Empatia</a>
-    <a href="#cooperacao">Cooperação</a>
-    <a href="#importancia">Importância</a>
-    <a href="#pratica">Na prática</a>
-  </nav>
-
   <main>
-
-    <section id="empatia">
-      <h2>💜 O que é Empatia?</h2>
+    <section class="card">
+      <h2>O poder de ouvir verdadeiramente</h2>
       <p>
-        Empatia é a capacidade de compreender os sentimentos, pensamentos
-        e experiências de outra pessoa. Ser empático significa tentar
-        enxergar uma situação pelo ponto de vista do outro, respeitando
-        suas emoções e diferenças.
+        A empatia começa quando nos dispomos a escutar sem julgar. Compreender a realidade de alguém não significa concordar em tudo, mas sim reconhecer que a perspectiva do outro possui valor e merece respeito.
       </p>
     </section>
 
-    <section id="cooperacao">
-      <h2>🤝 O que é Cooperação?</h2>
-      <p>
-        Cooperação é trabalhar em conjunto para alcançar um objetivo comum.
-        Ela envolve colaboração, respeito, responsabilidade e disposição
-        para ajudar outras pessoas.
-      </p>
-    </section>
-
-    <section id="importancia">
-      <h2>🌎 Por que são importantes?</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>❤️ Respeito</h3>
-          <p>
-            A empatia nos ajuda a respeitar sentimentos, opiniões e
-            diferenças.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>🗣️ Comunicação</h3>
-          <p>
-            Ouvir e compreender os outros melhora nossos relacionamentos.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>🤲 Solidariedade</h3>
-          <p>
-            Cooperar significa oferecer ajuda e também saber recebê-la.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>🌱 Convivência</h3>
-          <p>
-            Empatia e cooperação tornam os ambientes mais acolhedores e
-            harmoniosos.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="pratica">
-      <h2>✨ Como praticar no dia a dia?</h2>
-
-      <ul>
-        <li>👂 Escutar as pessoas com atenção.</li>
-        <li>💬 Respeitar opiniões diferentes.</li>
-        <li>❤️ Tentar compreender os sentimentos dos outros.</li>
-        <li>🤝 Ajudar colegas, amigos e familiares.</li>
-        <li>🧩 Trabalhar em equipe e dividir responsabilidades.</li>
-        <li>😊 Tratar todos com gentileza.</li>
-        <li>🌍 Valorizar as diferenças entre as pessoas.</li>
+    <section class="card">
+      <h2>Pequenas atitudes diárias</h2>
+      <ul class="tips-list">
+        <li><strong>Escuta Ativa:</strong> Preste atenção inteiramente à conversa, sem interromper.</li>
+        <li><strong>Sem Julgamentos:</strong> Tente entender o contexto antes de tirar conclusões.</li>
+        <li><strong>Acolhimento:</strong> Valide os sentimentos de quem desabafa com você.</li>
       </ul>
     </section>
 
-    <div class="frase">
-      “Quando nos colocamos no lugar do outro e trabalhamos juntos,
-      conseguimos fazer a diferença.”
-    </div>
-
+    <!-- Seção do Contador de Likes -->
+    <section class="like-section">
+      <p style="margin-bottom: 12px; color: #666;">Se você apoia a busca por mais empatia no mundo, deixe sua curtida:</p>
+      <button class="like-btn" onclick="adicionarLike()">
+        ❤️ Apoiar <span class="like-count" id="count">0</span>
+      </button>
+    </section>
   </main>
 
   <footer>
-    <p>💜 Empatia + 🤝 Cooperação = 🌎 Um mundo melhor</p>
+    <p>&copy; Espaço de reflexão sobre empatia e respeito mútuo.</p>
   </footer>
+
+  <!-- Lógica simples do contador de likes -->
+  <script>
+    let likes = 0;
+    function adicionarLike() {
+      likes++;
+      document.getElementById('count').innerText = likes;
+    }
+  </script>
 
 </body>
 </html>
-```
