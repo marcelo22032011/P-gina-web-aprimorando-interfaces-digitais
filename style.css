@@ -1,10 +1,10 @@
-:root
-argin 0;
-      pad /* Estilos Globais e Reset */
-    * {
-      box-sizing: border-box;
-      mding: 0;
-    }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+    
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
