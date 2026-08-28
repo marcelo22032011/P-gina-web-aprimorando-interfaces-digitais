@@ -1,0 +1,103 @@
+argin: 0;
+      pad /* Estilos Globais e Reset */
+    * {
+      box-sizing: border-box;
+      mding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8f6;
+      color: #2c3e50;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Cabeçalho */
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #a8e6cf, #dbede3);
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 2px solid #84c1a0;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #2d5a43;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #4a7c59;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Conteúdo Principal */
+    main {
+      max-width: 800px;
+      width: 90%;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .card {
+      margin-bottom: 30px;
+    }
+
+    .card h2 {
+      color: #3b7a57;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Seção de Ações de Empatia */
+    .tips-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .tips-list li {
+      background-color: #f0f7f4;
+      margin-bottom: 10px;
+      padding: 12px 18px;
+      border-left: 4px solid #57cc99;
+      border-radius: 4px;
+    }
+
+    /* Área do Botão de Curtidas */
+    .like-section {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .like-btn {
+      background-color: #57cc99;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 3px 10px rgba(87, 204, 153, 0.3);
+    }

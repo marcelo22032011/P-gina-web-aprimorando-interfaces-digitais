@@ -4,137 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Empatia & Compreensão</title>
-  <style>
-    /* Estilos Globais e Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f8f6;
-      color: #2c3e50;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    /* Cabeçalho */
-    header {
-      width: 100%;
-      background: linear-gradient(135deg, #a8e6cf, #dbede3);
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 2px solid #84c1a0;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #2d5a43;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #4a7c59;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Conteúdo Principal */
-    main {
-      max-width: 800px;
-      width: 90%;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .card {
-      margin-bottom: 30px;
-    }
-
-    .card h2 {
-      color: #3b7a57;
-      margin-bottom: 15px;
-      font-size: 1.6rem;
-    }
-
-    .card p {
-      margin-bottom: 15px;
-      font-size: 1.05rem;
-    }
-
-    /* Seção de Ações de Empatia */
-    .tips-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .tips-list li {
-      background-color: #f0f7f4;
-      margin-bottom: 10px;
-      padding: 12px 18px;
-      border-left: 4px solid #57cc99;
-      border-radius: 4px;
-    }
-
-    /* Área do Botão de Curtidas */
-    .like-section {
-      text-align: center;
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #e0e0e0;
-    }
-
-    .like-btn {
-      background-color: #57cc99;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.2s, transform 0.1s;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 3px 10px rgba(87, 204, 153, 0.3);
-    }
-
-    .like-btn:hover {
-      background-color: #38b000;
-    }
-
-    .like-btn:active {
-      transform: scale(0.96);
-    }
-
-    .like-count {
-      background-color: #ffffff;
-      color: #3b7a57;
-      padding: 2px 10px;
-      border-radius: 12px;
-      font-size: 0.95rem;
-    }
-
-    /* Rodapé */
-    footer {
-      margin-top: auto;
-      padding: 20px;
-      text-align: center;
-      color: #7f8c8d;
-      font-size: 0.9rem;
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -167,6 +37,32 @@
         ❤️ Apoiar <span class="like-count" id="count">0</span>
       </button>
     </section>
+
+
+     <section class="card">
+      <h2>O poder de ouvir verdadeiramente</h2>
+      <p>
+        A empatia começa quando nos dispomos a escutar sem julgar. Compreender a realidade de alguém não significa concordar em tudo, mas sim reconhecer que a perspectiva do outro possui valor e merece respeito.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Pequenas atitudes diárias</h2>
+      <ul class="tips-list">
+        <li><strong>Escuta Ativa:</strong> Preste atenção inteiramente à conversa, sem interromper.</li>
+        <li><strong>Sem Julgamentos:</strong> Tente entender o contexto antes de tirar conclusões.</li>
+        <li><strong>Acolhimento:</strong> Valide os sentimentos de quem desabafa com você.</li>
+      </ul>
+    </section>
+
+    <!-- Seção do Contador de Likes -->
+    <section class="like-section">
+      <p style="margin-bottom: 12px; color: #666;">Se você apoia a busca por mais empatia no mundo, deixe sua curtida:</p>
+      <button class="like-btn" onclick="adicionarLike()">
+        ❤️ Apoiar <span class="like-count" id="count">0</span>
+      </button>
+    </section>
+
   </main>
 
   <footer>
@@ -174,13 +70,6 @@
   </footer>
 
   <!-- Lógica simples do contador de likes -->
-  <script>
-    let likes = 0;
-    function adicionarLike() {
-      likes++;
-      document.getElementById('count').innerText = likes;
-    }
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>
